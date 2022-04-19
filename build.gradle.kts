@@ -19,10 +19,16 @@ dependencies {
     implementation(npm("react-dom", "18.0.0"))
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
+
+    //implementation(npm("karma", "6.3.6"))
+    implementation(npm("nanoid", "3.3.3"))
+    implementation(npm("async", "3.2.3"))
+    implementation(npm("node-forge", "1.3.1"))
+
 }
 
 kotlin {
-    js(LEGACY) {
+    js(IR) {
         binaries.executable()
         browser {
             commonWebpackConfig {
